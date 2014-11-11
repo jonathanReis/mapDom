@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste</title>
+	<script type="text/javascript" src="mapDom.js"></script>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		var map = mapDom;
+		map.set({mapTag:['date'],elements:['div', 'p']});
+
+	</script>
+
+	<div id="inicio" date="2014/11/10">
+	
+		em um fluxo
+	
+	</div><!-- FIM ID inicio-->
+
+	<div id="fim">
+	
+		somente le
+	
+	</div><!-- FIM ID fim-->
+
+	<p id="comeco" date="2014/11/09">aquele que</p>
+
+	<p date="2014/12/10">nada faz</p>
+
+	<script type="text/javascript">
+
+		map.getElements();
+		console.log(map.elementDom.val);
+		console.log(map.elementDom.all);
+
+		map.order('date');
+		console.log(map.elementDom.val);
+		console.log(map.elementDom.all);
+
+
+		console.log(map.filter({elements:['div']}));
+
+	</script>
+
+</body>
+</html>
